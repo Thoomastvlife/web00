@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+         body{
+            height:1080px;
+            width:1920px;
+            overflow:hidden;
+        }
+        header{
+            height:100px;
+            width:1920px;
+        }
+        main{   
+            height:880px;
+            width:1920px;
+        }
+        footer{
+            height:100px;
+            width:1920px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-success d-flex justify-content-around align-items-center">
+        <div class="w-25">logo</div>
+        <div class="w-25 d-flex">
+            <a class="w-25 btn btn-secondary m-1" href="index.html">Home</a>
+            <a class="w-25 btn btn-secondary m-1" href="news.html">news</a>
+            <a class="w-25 btn btn-secondary m-1" href="business.html">business</a>
+            <a class="w-25 btn btn-secondary m-1" href="tickets.html">tickets</a>
+        </div>
+    </header>
+    <main class="p-5">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="m-1 position-relative" style="width:500px;height:500px">
+                <img src="./img/world-map.png" alt="" style="width:100%;height:100%">
+                <div class="local btn btn-light position-absolute" style="top:126px;left:348px">
+                    <img src="./img/star.png" alt="">
+                    japanese
+                </div>
+                <div class="local btn btn-light position-absolute" style="top:200px;left:150px">
+                    <img src="./img/star.png" alt="">
+                    france
+                </div>
+                <div class="local btn btn-light position-absolute" style="top:300px;left:200px">
+                    <img src="./img/star.png" alt="">
+                    taiwan
+                </div>
+                <div class="local btn btn-light position-absolute" style="top:400px;left:300px">
+                    <img src="./img/star.png" alt="">
+                    amarican
+                </div>
+                <div class="local btn btn-light position-absolute" style="top:300px;left:400px">
+                    <img src="./img/star.png" alt="">
+                    british
+                </div>
+            </div>
+                <!--新聞資訊-->
+        <div class="m-1" style="width:500px;height:500px">
+            <div class="news position-relative">
+                <img src="./img/news-01.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>japanese</h3>        
+                    dfdasfasfasf
+                </div>
+            </div>
+            <div class="news position-relative" style="display:none">
+                <img src="./img/news-02.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>france</h3>    
+                    dfdasfasfasf
+                </div>
+            </div>
+            <div class="news position-relative" style="display:none">
+                <img src="./img/news-03.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>taiwan</h3>       
+                    dfdasfasfasf
+                </div>
+            </div>
+            <div class="news position-relative" style="display:none">
+                <img src="./img/news-04.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>amarican</h3>        
+                    dfdasfasfasf
+                </div>
+            </div>
+            <div class="news position-relative" style="display:none">
+                <img src="./img/news-05.png" style="width:100%;height:100%">
+                <div class="position-absolute w-100 p-3" style="bottom:0;height:180px;background-color:rgba(255,255,255,0.5)">
+                    <h3>british</h3>        
+                    dfdasfasfasf
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="bg-info d=flex flex-wrap align-items-center">
+
+        <div class="text-center w-100">
+            <img src="./img/icon_facebook.png" >
+            <img src="./img/icon_instagram.png"  >
+            <img src="./img/icon_twtter.png"  >
+            <img src="./img/icon_youtube.png"  >
+        </div>
+        <div class="text-center w-100">Copyright &copy; 2024 FIBEX All Rights Reserved</div>
+    </footer>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+    <script>
+    $(".local").on('click',function(){
+    let num=$(this).index('.local');
+    $(".news").hide()
+    $(".news").eq(num).show();
+    })
+    </script>
+</body>
+
+</html>

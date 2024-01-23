@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tickets</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body {
+            height: 1080px;
+            width: 1920px;
+            overflow: hidden;
+        }
+
+        header {
+            height: 100px;  
+            width: 1920px;
+        }
+
+        main {
+            height: 880px;
+            width: 1920px;
+        }
+
+        footer {
+            height: 100px;
+            width: 1920px;
+        }
+
+        #ver_number {
+            background-color: rgb(0, 42, 255);
+            text-align: center;
+            width: 80px;
+            border-radius: 10px;
+            color: red;
+            font-size: 150%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-success d-flex justify-content-around align-items-center">
+        <div class="w-25">logo</div>
+        <div class="w-25 d-flex">
+            <a class="w-25 btn btn-secondary m-1" href="index.html">Home</a>
+            <a class="w-25 btn btn-secondary m-1" href="news.html">news</a>
+            <a class="w-25 btn btn-secondary m-1" href="business.html">business</a>
+            <a class="w-25 btn btn-secondary m-1" href="tickets.html">tickets</a>
+        </div>
+    </header>
+    <main class="p-5 m-auto w-75">
+        <form action="./backend.php" method='post'>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="name">名字</label>
+                    <input type="text" class="form-control" name=name id="name">
+                </div>
+                <label for="email">電子信箱 Email</label>
+                <input type="email" class="form-control" name="email" id="email">
+                <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyoneelse.</small>-->
+                <div class="form-group">
+                    <label for="phone">電話</label>
+                    <input type="tel" class="form-control" name="phone" id="phone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">密碼</label>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+            <p id="ver_number"></p>
+            <div class="form-group">
+                <label for="ver">驗證碼</label>
+                <input type="text" class="form-control" name="ver" id="ver">
+                <input type="hidden" id="answer" name="answer">
+            </div>
+            <!--<div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">確認送出</label>
+            </div>-->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
+    <footer class="bg-info d=flex flex-wrap align-items-center">
+
+        <div class="text-center w-100">
+            <img src="img/icon_facebook.png">
+            <img src="img/icon_instagram.png">
+            <img src="img/icon_twtter.png">
+            <img src="img/icon_youtube.png">
+        </div>
+
+        <div class="text-center w-100">Copyright &copy; 2024 FIBEX All Rights Reserved</div>
+    </footer>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+    <script>
+
+        let answer=document.getElementById('answer');
+        let ver_number = document.getElementById("ver_number");
+
+        let ez_random = Math.floor(Math.random() * 10000);
+        let hi_random = Math.floor(Math.random() * 10000).toString().padStart(4, "0");
+        let random = Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString()
+        
+        console.log(random);
+        console.log(ez_random);
+        console.log(hi_random);
+
+        ver_number.innerText = hi_random;
+        answer.value = hi_random;
+    
+    </script>
+</body>
+
+</html>
